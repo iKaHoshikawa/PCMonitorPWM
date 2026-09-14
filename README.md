@@ -100,7 +100,7 @@ Please save the audio files to be used for indicating that both the CPU and GPU 
 
 3. 在上位机软件中选择正确的串口（通常会自动识别），单击“连接”即可。如果CPU数据显示为0，请先安装PawnIO。部分显卡（如部分品牌RTX 4060）功耗数据不会正常显示，请先使用厂商驱动确认能否正确读取数据，如果不能则无解；如能，请提交issue。
 
-
+<!-- -->
 
 1. Download the installer package published in Releases and install the console software. Because it involves reading system information, it may be reported as a virus — just ignore it. Alternatively, you can get the source code from the `console` folder and compile it yourself.
    
