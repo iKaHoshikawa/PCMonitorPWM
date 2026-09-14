@@ -22,8 +22,8 @@ Physical PC performance monitor with analog gauges — watch your PC hardware us
 | 报警喇叭 / Alarm Speaker | 5W | 1 | 报警 / For alarm |
 | LCD 屏幕 / Screen | 1602 | 1 | 显示部分数据 / For displaying part of the data |
 | 开关 / Switch | - | 1 | 控制喇叭开关 / For controlling the power of the speaker |
-| I2C转1602转接板 / I2C LCD1602 Adapter | PCF8574 | 1 | 驱动LCD屏幕 / For driving the LCD screen |
-| TF 卡 / Card | ≥32MB | 1 | 存储报警音频 / For saving the alarm audio files |
+| I²C转1602转接板 / I²C LCD1602 Adapter | PCF8574 | 1 | 驱动LCD屏幕 / For driving the LCD screen |
+| TF 卡 / Card | 32MB ~ 32GB | 1 | 存储报警音频 / For saving the alarm audio files |
 
 ## 🔌 线缆连接 Wire Connection
 
@@ -56,7 +56,7 @@ Physical PC performance monitor with analog gauges — watch your PC hardware us
 | LCD绿色背光 / LCD Green Backlight | 14 |
 | LCD红色背光 / LCD Red Backlight | 15 |
 
-### I2C转1602转接板 / I2C LCD1602 Adapter
+### I²C转1602转接板 / I²C LCD1602 Adapter
 
 转接板大多不用丝印展示引脚定义。请详询商家，按对应位置连接1602屏幕。
 
@@ -79,10 +79,6 @@ It is recommended to connect the switch in series on the positive terminal.
 
 Please save the audio files to be used for indicating that both the CPU and GPU temperatures are too high, that the GPU temperature is too high, and that the CPU temperature is too high as 0001.mp3, 0002.mp3, and 0003.mp3 respectively, store them on a TF card formatted as FAT16 or FAT32, and insert it into the DFPlayer mini.
 
-**电压表表盘位于image文件夹，可自行取用，亦可重新设计。**
+**电压表表盘和亚克力外壳位于image文件夹，可自行取用，亦可重新设计。**
 
-**The voltmeter dials are located in the image folder. You can use them as needed, or redesign them yourself.**
-
-**亚克力外壳设计中，待补。**
-
-**Acrylic enclosure design in progress — to be added.**
+**The voltmeter dials acrylic enclosure and are located in the image folder. You can use them as needed, or redesign them yourself.**
