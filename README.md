@@ -66,6 +66,7 @@ Most adapter boards do not use silkscreen to show the pin definitions. Please co
 | --------- | ---------|
 | 喇叭.正极 / Speaker.Positive | SPK_0 |
 | 喇叭.负极 / Speaker.Negative | SPK_1 |
+
 建议将开关串联在正极上。
 It is recommended to connect the switch in series on the positive terminal.
 
