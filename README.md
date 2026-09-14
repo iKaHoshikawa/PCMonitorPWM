@@ -24,6 +24,7 @@ Physical PC performance monitor with analog gauges — watch your PC hardware us
 | 开关 / Switch | - | 1 | 控制喇叭开关 / For controlling the power of the speaker |
 | I²C转1602转接板 / I²C LCD1602 Adapter | PCF8574 | 1 | 驱动LCD屏幕 / For driving the LCD screen |
 | TF 卡 / Card | 32MB ~ 32GB | 1 | 存储报警音频 / For saving the alarm audio files |
+| 发光二极管 / LED | 红、黄、绿各一 / One each of red, yellow and green | 3 | 状态显示 / For status displaying |
 
 ## 🔌 线缆连接 Wire Connection
 
@@ -41,7 +42,11 @@ Physical PC performance monitor with analog gauges — watch your PC hardware us
 | I2C转1602转接板.SDA / I2C LCD1602 adapter.SDA | 2 |
 | I2C转1602转接板.SCL / I2C LCD1602 adapter.SCL | 3 |
 
-### PCA9685
+所有元件共地。
+
+All components share a common GND.
+
+### PCA9685（全部接到VCC而非V+引脚 / All wires should be connected to VCC instead of V+）
 
 | 将 / Connect | 接到 / to |
 | --------- | ---------|
@@ -55,6 +60,10 @@ Physical PC performance monitor with analog gauges — watch your PC hardware us
 | LCD蓝色背光 / LCD Blue Backlight | 13 |
 | LCD绿色背光 / LCD Green Backlight | 14 |
 | LCD红色背光 / LCD Red Backlight | 15 |
+
+所有元件共地。
+
+All components share a common GND.
 
 ### I²C转1602转接板 / I²C LCD1602 Adapter
 
