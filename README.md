@@ -4,8 +4,9 @@
 ![GitHub stars](https://img.shields.io/github/stars/iKaHoshikawa/PCMonitorPWM)
 ![GitHub issues](https://img.shields.io/github/issues/iKaHoshikawa/PCMonitorPWM)
 
-Physical PC performance monitor with analog gauges — watch your PC hardware usage come to life with moving needles, powered by Arduino &amp; PCA9685.
 一款使用物理指针显示数据的PC性能监视器——使用移动的指针观测PC硬件的使用数据，基于Arduino和PCA9685。
+
+Physical PC performance monitor with analog gauges — watch your PC hardware usage come to life with moving needles, powered by Arduino &amp; PCA9685.
 
 ## 🛠️ 硬件清单 Hardware List
 
@@ -58,6 +59,7 @@ Physical PC performance monitor with analog gauges — watch your PC hardware us
 ### I2C转1602转接板 / I2C LCD1602 Adapter
 
 转接板大多不用丝印展示引脚定义。请详询商家，按对应位置连接1602屏幕。
+
 Most adapter boards do not use silkscreen to show the pin definitions. Please consult the seller for details, and connect the 1602 screen according to the corresponding positions.
 
 ### DFPlayer mini
@@ -68,15 +70,19 @@ Most adapter boards do not use silkscreen to show the pin definitions. Please co
 | 喇叭.负极 / Speaker.Negative | SPK_1 |
 
 建议将开关串联在正极上。
+
 It is recommended to connect the switch in series on the positive terminal.
 
 ### 关于TF卡 / About the TF Card
 
 请将欲使用的表示CPU和GPU同时温度过高、表示GPU温度过高和表示CPU温度过高的音频分别保存为0001.mp3、0002.mp3和0003.mp3，存储于格式化为FAT16或FAT32的TF卡中，并将其插入DFPlayer mini。
-Please save the audio files to be used for indicating that both the CPU and GPU temperatures are too high, that the GPU temperature is too high, and that the CPU temperature is too high as 001.mp3, 002.mp3, and 003.mp3 respectively, store them on a TF card formatted as FAT16 or FAT32, and insert it into the DFPlayer mini.
+
+Please save the audio files to be used for indicating that both the CPU and GPU temperatures are too high, that the GPU temperature is too high, and that the CPU temperature is too high as 0001.mp3, 0002.mp3, and 0003.mp3 respectively, store them on a TF card formatted as FAT16 or FAT32, and insert it into the DFPlayer mini.
 
 **电压表表盘位于image文件夹，可自行取用，亦可重新设计。**
+
 **The voltmeter dials are located in the image folder. You can use them as needed, or redesign them yourself.**
 
 **亚克力外壳设计中，待补。**
+
 **Acrylic enclosure design in progress — to be added.**
