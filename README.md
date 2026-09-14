@@ -75,8 +75,8 @@ It is recommended to connect the switch in series on the positive terminal.
 请将欲使用的表示CPU和GPU同时温度过高、表示GPU温度过高和表示CPU温度过高的音频分别保存为0001.mp3、0002.mp3和0003.mp3，存储于格式化为FAT16或FAT32的TF卡中，并将其插入DFPlayer mini。
 Please save the audio files to be used for indicating that both the CPU and GPU temperatures are too high, that the GPU temperature is too high, and that the CPU temperature is too high as 001.mp3, 002.mp3, and 003.mp3 respectively, store them on a TF card formatted as FAT16 or FAT32, and insert it into the DFPlayer mini.
 
-**电压表表盘位于images文件夹，可自行取用，亦可重新设计。**
-**The voltmeter dials are located in the images folder. You can use them as needed, or redesign them yourself.**
+**电压表表盘位于image文件夹，可自行取用，亦可重新设计。**
+**The voltmeter dials are located in the image folder. You can use them as needed, or redesign them yourself.**
 
 **亚克力外壳设计中，待补。**
 **Acrylic enclosure design in progress — to be added.**
