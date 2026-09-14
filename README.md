@@ -8,7 +8,7 @@
 
 Physical PC performance monitor with analog gauges — watch your PC hardware usage come to life with moving needles, powered by Arduino &amp; PCA9685.
 
-## 🛠️ 硬件清单 Hardware List
+## 🛠️ 硬件清单 / Hardware List
 
 | 组件 / Component | 型号 / Model | 数量 / Qty | 备注 / Remarks |
 |------|----------|------|------|
@@ -26,7 +26,7 @@ Physical PC performance monitor with analog gauges — watch your PC hardware us
 | TF 卡 / Card | 32MB ~ 32GB | 1 | 存储报警音频 / For saving the alarm audio files |
 | 发光二极管 / LED | 红、黄、绿各一 / One each of red, yellow and green | 3 | 状态显示 / For status displaying |
 
-## 🔌 线缆连接 Wire Connection
+## 🔌 线缆连接 / Wire Connection
 
 ### Arduino Leonardo
 
