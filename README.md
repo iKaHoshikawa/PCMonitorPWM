@@ -84,10 +84,25 @@ It is recommended to connect the switch in series on the positive terminal.
 
 ### 关于TF卡 / About the TF Card
 
-请将欲使用的表示CPU和GPU同时温度过高、表示GPU温度过高和表示CPU温度过高的音频分别保存为0001.mp3、0002.mp3和0003.mp3，存储于格式化为FAT16或FAT32的TF卡中，并将其插入DFPlayer mini。
+请将欲使用的表示CPU和GPU同时温度过高、表示GPU温度过高和表示CPU温度过高的音频分别保存为`0001.mp3`、`0002.mp3`和`0003.mp3`，存储于格式化为FAT16或FAT32的TF卡中，并将其插入DFPlayer mini。
 
-Please save the audio files to be used for indicating that both the CPU and GPU temperatures are too high, that the GPU temperature is too high, and that the CPU temperature is too high as 0001.mp3, 0002.mp3, and 0003.mp3 respectively, store them on a TF card formatted as FAT16 or FAT32, and insert it into the DFPlayer mini.
+Please save the audio files to be used for indicating that both the CPU and GPU temperatures are too high, that the GPU temperature is too high, and that the CPU temperature is too high as `0001.mp3`, `0002.mp3`, and `0003.mp3` respectively, store them on a TF card formatted as FAT16 or FAT32, and insert it into the DFPlayer mini.
 
-**电压表表盘和亚克力外壳位于image文件夹，可自行取用，亦可重新设计。**
+**电压表表盘和亚克力外壳位于`image`文件夹，可自行取用，亦可重新设计。**
 
-**The voltmeter dials acrylic enclosure and are located in the image folder. You can use them as needed, or redesign them yourself.**
+**The voltmeter dials acrylic enclosure and are located in the `image` folder. You can use them as needed, or redesign them yourself.**
+
+## 💻 使用方法 / Usage
+
+1. 下载Release中发布的安装包安装上位机软件，因涉及系统信息读取，可能会报告为病毒，忽略即可；亦可从`console`文件夹获取源码自行编译使用。
+
+2. 使用Arduino IDE将`controller`文件夹中的`.ino`文件烧录到Arduino Leonardo中。
+
+3. 在上位机软件中选择正确的串口（通常会自动识别），单击“连接”即可。如果CPU数据显示为0，请先安装PawnIO。部分显卡（如部分品牌RTX4060）功耗数据不会正常显示，请先使用厂商驱动确认能否正确读取数据，如果不能则无解；如能，请提交issue。
+
+
+1. Download the installer package published in Releases and install the console software. Because it involves reading system information, it may be reported as a virus — just ignore it. Alternatively, you can get the source code from the `console` folder and compile it yourself.
+   
+2. Use the Arduino IDE to flash the `.ino` file in the `controller` folder to the Arduino Leonardo.
+   
+3. In the console software, select the correct serial port (it is usually detected automatically), then click "Connect". If the CPU data shows 0, please install PawnIO first. On some graphics cards (such as certain branded RTX 4060s), the power consumption data will not display properly. Please first use the manufacturer's driver to check whether the data can be read correctly. If it cannot, there is no solution; if it can, please submit an issue.
