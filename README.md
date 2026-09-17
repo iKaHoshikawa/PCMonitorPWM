@@ -8,6 +8,10 @@
 
 Physical PC performance monitor with analog gauges — watch your PC hardware usage come to life with moving needles, powered by Arduino &amp; PCA9685.
 
+
+![效果图](preview/IMG_8520.JPG)
+
+
 ## 🛠️ 硬件清单 / Hardware List
 
 | 组件 / Component | 型号 / Model | 数量 / Qty | 备注 / Remarks |
