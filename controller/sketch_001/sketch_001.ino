@@ -198,9 +198,9 @@ void loop() {
     pca.setPWM(LCD_B, 0, 1024);
     lcd.clear();
     lcd.setCursor(0, 0);
-    lcd.print("Waiting for");
+    lcd.print("PCMonitor by iKa");
     lcd.setCursor(0, 1);
-    lcd.print("input...");
+    lcd.print("Zzzzzzzz........");
   } else {
     if (CL > 460) {
       CLHContinue += 1;
