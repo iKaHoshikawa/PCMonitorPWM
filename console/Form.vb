@@ -439,7 +439,11 @@ Public Class Form
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim config As New Conf()
+        Dim jsonTextOrigin As String = File.ReadAllText(configPath)
+        Dim config As Conf = JsonSerializer.Deserialize(Of Conf)(jsonTextOrigin)
+        If config Is Nothing Then
+            config = New Conf()
+        End If
         Dim options As New JsonSerializerOptions With
             {
                 .WriteIndented = True
@@ -455,7 +459,7 @@ Public Class Form
             }
             Process.Start(psi)
         ElseIf CheckBox1.Checked = True AndAlso config.startup = False Then
-            Dim cmd As String = $"schtasks /create /tn ""{taskName}"" /tr ""'{exePath}'"" /sc ONSTART /rl HIGHEST /f"
+            Dim cmd As String = $"schtasks /create /tn ""{taskName}"" /tr ""{exePath}"" /sc ONLOGON /rl HIGHEST /f"
             Dim psi As New ProcessStartInfo("cmd.exe", "/c " & cmd) With {
                 .CreateNoWindow = True,
                 .UseShellExecute = False,
@@ -464,7 +468,7 @@ Public Class Form
             Process.Start(psi)
         End If
         Try
-            config.Port = ComboBox1.SelectedItem?.ToString()
+            config.Port = ComboBox1.SelectedItem?.ToString().Split(":"c)(0)
             If ComboBox2.SelectedItem <> "同时监测多个CPU" Then
                 config.SelectedCPU = ComboBox2.SelectedItem?.ToString()
             Else

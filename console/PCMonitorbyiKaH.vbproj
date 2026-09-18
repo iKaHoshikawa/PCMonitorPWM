@@ -7,7 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <Authors>iKa Hoshikawa</Authors>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Title>Monitor Console</Title>
     <PackageIcon>Picture1.png</PackageIcon>
     <ApplicationIcon>Picture1.ico</ApplicationIcon>
