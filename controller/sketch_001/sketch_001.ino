@@ -273,7 +273,6 @@ void loop() {
         pca.setPWM(LCD_R, 0, 1024);
         pca.setPWM(LCD_G, 0, 1024);
         pca.setPWM(LCD_B, 0, 0);
-        lcd.clear();
         HH = T / 100;
         MM = T % 100;
         if(HH < 10){
