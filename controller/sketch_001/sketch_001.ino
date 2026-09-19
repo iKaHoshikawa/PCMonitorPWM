@@ -103,9 +103,9 @@ void setup() {
   digitalWrite(LED_R, LOW);
   pca.begin();
   pca.setPWMFreq(1000);
-  pca.setPWM(LCD_R, 0, 1024);
-  pca.setPWM(LCD_G, 0, 1024);
-  pca.setPWM(LCD_B, 0, 1024);
+  pca.setPWM(LCD_R, 0, 512);
+  pca.setPWM(LCD_G, 0, 512);
+  pca.setPWM(LCD_B, 0, 512);
   test();
   delay(500);
   if (DFPlayer.begin(Serial1)) {
@@ -193,9 +193,9 @@ void loop() {
     pca.setPWM(8, 0, 0);
     pca.setPWM(10, 0, 0);
     pca.setPWM(12, 0, 0);
-    pca.setPWM(LCD_R, 0, 1024);
-    pca.setPWM(LCD_G, 0, 1024);
-    pca.setPWM(LCD_B, 0, 1024);
+    pca.setPWM(LCD_R, 0, 128);
+    pca.setPWM(LCD_G, 0, 128);
+    pca.setPWM(LCD_B, 0, 512);
     lcd.setCursor(0, 0);
     lcd.print("PCMonitor by iKa");
     lcd.setCursor(0, 1);
@@ -271,7 +271,7 @@ void loop() {
         digitalWrite(LED_R, LOW);
         digitalWrite(LED_G, LOW);
         pca.setPWM(LCD_R, 0, 1024);
-        pca.setPWM(LCD_G, 0, 1024);
+        pca.setPWM(LCD_G, 0, 700);
         pca.setPWM(LCD_B, 0, 0);
         HH = T / 100;
         MM = T % 100;
