@@ -23,6 +23,7 @@ Partial Class Form
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form))
         Label1 = New Label()
         ComboBox1 = New ComboBox()
         Timer1 = New Timer(components)
@@ -370,6 +371,7 @@ Partial Class Form
         Controls.Add(ComboBox1)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Form"
