@@ -403,10 +403,10 @@ void loop() {
         lcd.setCursor(0,0);
         lcd.print("  !!High Temp!! ");
         lcd.setCursor(0,1);
-        lcd.print("GPU ");
+        lcd.print("    GPU ");
         lcd.print(GTH);
         lcd.write(0);
-        lcd.print("      ");
+        lcd.print("                ");
       }
       if (CTH != 0 && GTH == 0 && playing != 3) {
         DFPlayer.stop();
@@ -415,10 +415,10 @@ void loop() {
         lcd.setCursor(0,0);
         lcd.print("  !!High Temp!! ");
         lcd.setCursor(0,1);
-        lcd.print("CPU ");
+        lcd.print("    CPU ");
         lcd.print(CTH);
         lcd.write(0);
-        lcd.print("      ");
+        lcd.print("                ");
       }
       if (CTH != 0 && GTH != 0 && playing != 1) {
         DFPlayer.stop();
@@ -433,7 +433,7 @@ void loop() {
         lcd.print(" GPU ");
         lcd.print(GTH);
         lcd.write(0);
-        lcd.print("      ");
+        lcd.print("                ");
       }
     }
   }
