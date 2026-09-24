@@ -60,6 +60,60 @@ byte gpu[8] = {
   0b01110
 };
 
+byte eye[8] = {
+  0b11111,
+  0b10001,
+  0b10001,
+  0b10001,
+  0b10001,
+  0b10001,
+  0b01110,
+  0b00000
+};
+
+byte mouth[8] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b01110
+};
+
+byte eye_dead[8] = {
+  0b00000,
+  0b10001,
+  0b01010,
+  0b00100,
+  0b01010,
+  0b10001,
+  0b00000
+};
+
+byte yeah[8] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b10001,
+  0b01010,
+  0b00100,
+  0b00100,
+  0b00100
+};
+
+byte sweat[8] = {
+  0b00100,
+  0b00100,
+  0b01110,
+  0b01110,
+  0b00100,
+  0b00000,
+  0b00000,
+  0b00000
+};
+
 void test() {
   for (int i = 0; i < 13; i++) {
     pca.setPWM(i, 0, 4095);
@@ -94,6 +148,11 @@ void setup() {
   lcd.createChar(0, degc);
   lcd.createChar(1, cpu);
   lcd.createChar(2, gpu);
+  lcd.createChar(3, eye);
+  lcd.createChar(4, mouth);
+  lcd.createChar(5, eye_dead);
+  lcd.createChar(6, yeah);
+  lcd.createChar(7, sweat);
   lcd.clear();
   pinMode(LED_G, OUTPUT);
   pinMode(LED_Y, OUTPUT);
@@ -256,7 +315,15 @@ void loop() {
         lcd.write(0);
         lcd.print("      ");
         lcd.setCursor(0, 1);
-        lcd.print("(^_^)v Good!    ");
+        lcd.print("(");
+        lcd.write(3);
+        lcd.write(4);
+        lcd.write(3);
+        lcd.print(")");
+        lcd.write(6);
+        lcd.print(" ");
+        lcd.print("\xB6\xDE\xDD\xCA\xDE\xAF\xC3");
+        lcd.print("!          ");
         DFPlayer.stop();
         playing = 0;
       } else {
@@ -303,7 +370,15 @@ void loop() {
         lcd.write(0);
         lcd.print("      ");
         lcd.setCursor(0, 1);
-        lcd.print("(x_x) Struggling");
+        lcd.print("(");
+        lcd.write(5);
+        lcd.write(4);
+        lcd.write(5);
+        lcd.print(")");
+        lcd.write(7);
+        lcd.print(" ");
+        lcd.print("\xC0\xBD\xB9\xC3\xB0");
+        lcd.print("!         ");
         DFPlayer.stop();
         playing = 0;
       }
