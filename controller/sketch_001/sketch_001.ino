@@ -372,7 +372,7 @@ void loop() {
         lcd.setCursor(0, 1);
         lcd.print("(");
         lcd.write(5);
-        lcd.write(4);
+        lcd.write(" ");
         lcd.write(5);
         lcd.print(")");
         lcd.write(7);
