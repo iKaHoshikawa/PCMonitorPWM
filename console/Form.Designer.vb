@@ -56,6 +56,7 @@ Partial Class Form
         Label20 = New Label()
         Timer2 = New Timer(components)
         NotifyIcon1 = New NotifyIcon(components)
+        CheckBox2 = New CheckBox()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         SuspendLayout()
@@ -348,11 +349,22 @@ Partial Class Form
         NotifyIcon1.Text = "NotifyIcon1"
         NotifyIcon1.Visible = True
         ' 
+        ' CheckBox2
+        ' 
+        CheckBox2.AutoSize = True
+        CheckBox2.Location = New Point(12, 294)
+        CheckBox2.Name = "CheckBox2"
+        CheckBox2.Size = New Size(95, 24)
+        CheckBox2.TabIndex = 5
+        CheckBox2.Text = "自动隐藏"
+        CheckBox2.UseVisualStyleBackColor = True
+        ' 
         ' Form
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(505, 370)
+        Controls.Add(CheckBox2)
         Controls.Add(Label20)
         Controls.Add(Label19)
         Controls.Add(Button3)
@@ -418,5 +430,6 @@ Partial Class Form
     Friend WithEvents Label20 As Label
     Friend WithEvents Timer2 As Timer
     Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents CheckBox2 As CheckBox
 
 End Class

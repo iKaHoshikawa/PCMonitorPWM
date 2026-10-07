@@ -263,6 +263,7 @@ Public Class Form
             config.SelectedCPU = ""
             config.SelectedGPU = ""
             config.startup = False
+            config.autoHide = False
             Dim jsonText As String = JsonSerializer.Serialize(config, options)
             File.WriteAllText(configPath, jsonText)
             SavedCPU = ""
@@ -277,9 +278,13 @@ Public Class Form
                     SavedCPU = config.SelectedCPU
                     SavedGPU = config.SelectedGPU
                     CheckBox1.Checked = config.startup
+                    CheckBox2.Checked = config.autoHide
                 End If
             Catch ex As Exception
             End Try
+        End If
+        If CheckBox2.Checked = True Then
+            Me.Hide()
         End If
         ComboBox3.Items.Clear()
         ComboBox2.Items.Clear()
@@ -476,6 +481,7 @@ Public Class Form
             End If
             config.SelectedGPU = ComboBox3.SelectedItem?.ToString()
             config.startup = CheckBox1.Checked
+            config.autoHide = CheckBox2.Checked
             Dim jsonText As String = JsonSerializer.Serialize(config, options)
             File.WriteAllText(configPath, jsonText)
             MessageBox.Show("配置保存成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -483,4 +489,5 @@ Public Class Form
             MessageBox.Show($"保存失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
 End Class
